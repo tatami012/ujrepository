@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<head>
+<title>halaigali</title>
+
+</head>
+<h1>Szorzó</h1>
+
+<body>
+<div class="row">
+<div clas="container">
+<div class="col-2"></div>
+<div class="col-6">
+<label> szorzandó </label>
+<input class="elso"  type="number" name="szam">
+<label> szorzó </label>
+<input  class="masodik" type="number" name="szam2">
+<button type="button" onclick ="számolás()" class="btn btn-primary">szoroz</button>
+<button type="button" onclick="document.querySelector('input').value=''"name="delete" class="btn btn-danger">töröl</button>
+<span class="show-ertek">0</span>   szorzat
+<div class="col-2"></div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+
+
+function számolás(){
+let y=document.querySelector("input[name='szam']");
+let x= document.querySelector("input[name='szam2']");
+let showErtek= document.querySelector("span.show-ertek");
+let ySzam=parseInt(y.value);
+let xSzam=parseInt(x.value);
+let ertek=parseInt(y.value)*parseInt(x.value);
+
+showErtek.innerHTML= ertek;
+}
+</script>
+
+
+</body>
+<style type="text/css">
+html{
+background-color: #e0e0e0;
+
+}
+h1{
+font-family:Times-Newroman;
+font-size: 20px;
+background-color:  #e0e0e0;
+text-align:  center;
+}
+
+.container{
+background-color: #e0e0e0;
+border: solid 10px  black;
+}
+</style>
+
+</html>

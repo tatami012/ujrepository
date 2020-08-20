@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<h1 >Adatok</h1>
+ Name:<p id="object"></p>
+Address:<p id="list" ></p> 
+age:<p id="tomb"></p>
+
+
+
+<script type="text/javascript">
+
+
+let Name= [ "Tóth Tamás", 46, "Vásárosnamény"];
+ let Hertek = document.getElementById("object");
+ let Hlist = document.getElementById( "list");
+ let Htomb = document.getElementById("tomb");
+ Hlist.innerHTML=Name[2];
+ Hertek.innerHTML=Name[0];
+Htomb.innerHTML=Name[1]; 
+
+
+</script>
+<style type="text/css">
+body {
+background-color: #e0e0e0;
+}
+p {
+font-size: 30px;
+text-align: center;
+border: solid 3px grey;
+border-radius: 20px;
+box-shadow: 5px 5px black;
+color: #000000;
+background-color: #a0a0a0;
+}
+h1 {
+text-align: center;
+color: green;
+border: double 5px black;
+background-color:cyan;
+border-radius: 20px;
+</style>
+
+</body>
+</html>

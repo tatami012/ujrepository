@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<table>
+<tr>
+<th>sorsz</th>
+<th>név</th>
+<th>kor</th>
+<th>cím</th>
+</tr>
+<tr>
+<td>1</td>
+<td class="name"></td>
+<td class="age"></td>
+<td class="address"></td>
+</tr>
+<tr>
+<td>2</td>
+<td class="name1"></td>
+<td class="age1"></td>
+<td class="address1"></td>
+</tr>
+</table>
+
+
+
+
+
+<script type="text/javascript">
+
+let names={ name:"Tamás",
+            age: 46,
+            address:"Vásárosnamény",
+            }
+          let names2={ name2:"Csilla",
+            age2: 21,
+            address2:"Vásárosnamény"
+            }; 
+
+let Name=document.querySelector("td.name");
+let Age=document.querySelector("td.age");
+let Address= document.querySelector("td.address");
+Name.innerHTML=(names.name);
+ Age.innerHTML=(names.age);
+ Address.innerHTML=(names.address);  
+ let Name1=document.querySelector("td.name1");
+ let Age1=document.querySelector("td.age1");
+ let Address1= document.querySelector("td.address1");
+ Name1.innerHTML=(names2.name2);
+ Age1.innerHTML=(names2.age2);
+ Address1.innerHTML=(names2.address2);  
+ 
+</script>
+<style type="text/css">
+
+table,   td{
+border: 2px solid black;
+background-color:#f0f0f0;
+box-shadow:2px 2px #red;
+}
+body {
+background-color: blue;
+
+}
+
+</style>
+</body>
+</html>
