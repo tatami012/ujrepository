@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <link rel="stylesheet" href="img/papir.jpg">
+<label>   Aru</label>
+<input type="text" name="aru" autofocus>
+    <button onclick="Arufunction()">Hozzáad</button><br>
+    <label>mennyiség</label>
+<input type="number" name="szam" placeholder="db">
+    <button onclick="Szamfunction()">Hozzáad</button><br>
+    <label>egységár</label>
+<input type="number" name="ar" placeholder="Ft">
+    <button onclick="arfunction()">Hozzáad</button><br>
+
+  <ul>
+  
+<b>Áru neve</b><li id="aru"></li>
+<b>Menyiség</b><li id="szam"></li>
+<b>Ár</b><li id="ar"></li>
+<b>Össz ár</b><li id="ossz"></li>
+</ul>
+    <button onclick="szamitas()">Összesen</button>
+<script type="text/javascript">
+function Arufunction() {
+let aru=document.querySelector("input[name='aru']");
+let xaru= String(aru.value);
+let Aru=document.getElementById("aru");
+alert(xaru);
+Aru.innerHTML=xaru;
+}
+function Szamfunction() {
+let szam=document.querySelector("input[name='szam']");
+let xszam= parseInt(szam.value);
+let Szam=document.getElementById("szam");
+alert(xszam+"db");
+Szam.innerHTML=xszam+" db "
+}
+function arfunction() {
+let ar=document.querySelector("input[name='ar']");
+let xar= parseInt(ar.value);
+let Ar=document.getElementById("ar");
+alert(xar+" Ft ");
+Ar.innerHTML=xar+" Ft ";
+}
+function szamitas() {
+let szam=document.querySelector("input[name='szam']");
+let ar=document.querySelector("input[name='ar']");
+let xszam= parseInt(szam.value);
+let xar= parseInt(ar.value);
+let ossz= parseInt(szam.value)*parseInt(ar.value);
+let Ossz = document.getElementById("ossz");
+alert(ossz+" Ft ");
+Ossz.innerHTML = ossz+" Ft "
+}
+
+</script>
+<style type="text/css">
+body {
+    background-image:url('img/papir.jpg');
+}
+button {
+background-color: blue;
+box-shadow:3px 3px  black;
+border-radius: 10px;
+font-size:20px;
+color: white;
+}
+ul{
+background-color: #f0f0f0;
+border:solid 3px blue;
+color:green;
+}
+#ossz {
+color: #A00000;
+}
+input {
+border: 3px solid green;
+border-radius: 10px;
+box-shadow: 3px 3px black;
+background-color: purple;
+font-size: 20px;
+color:white;
+}
+</style>
+
+
+</body>
+</html>
