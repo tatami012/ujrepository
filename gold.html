@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<h1>cim</h1>
+<label>Vezeték név</label>
+<input type="text" name="lastname" autofocus><br>
+<label >Kereszt név</label>
+<input type="text" name="firstname"><br>
+<label>Születési év</label>
+<input type="date"><br>
+<label>Lakhely    </label>
+<input type="text" name="addres"><br>
+<button  onclick="unction()">gomb</button>
+<p id="gomb"></p>
+<style type="text/css">
+body {
+background-color: #ff0099;
+}
+input {
+background-color: #ff0099;
+}
+label {
+    text-align: center;
+
+}
+h1{
+color:gold;
+font-size:50px;
+}
+p {
+font-size:60px;
+color:cyan;
+}
+</style>
+<script type="text/javascript">
+function unction() {
+let Lastname= document.querySelector("input[name='lastname']");
+let lastname= String(Lastname.value);
+let Firstname= document.querySelector("input[name='firstname']");
+let firstname= String(Firstname.value);
+let Addres= document.querySelector("input[name='addres']");
+let addres= String(Addres.value);
+let name=document.getElementById("gomb");
+let firstname1= [firstname,23,addres ];
+name.innerHTML=lastname+firstname1;
+alert(lastname+firstname1);
+}
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

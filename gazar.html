@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>gáz számitó</title>
+</head>
+<body>
+<img src="./Visual Studio/progik/gaz.jpg"  height="60px">
+<h1><b>Gáz ár kalkulátor</b></h1>
+<label><b>Elfogyasztott gáz mennyiség:</b></label><br>
+<input id="ar" type="number" autofocus ><b><p id="d">  m3</p></b>
+<button onclick="Amount()">Számitás</button>
+<button type="button" onclick="document.querySelector('input').value=''"name="delete" class="btn btn-danger">töröl</button>
+<p id="a">0 Ft</p><p id="b">A kikalkulált gáz ár, ha 120 Ft az egységár.</p>
+<script type="text/javascript">
+alert(" Üdvözlöm a gáz ár kalkulátor nál, Kérem adja meg az elfogyasztott gáz mennyiségét!");
+function Amount(){
+let ar=document.getElementById("ar");
+let Ar=parseInt(ar.value);
+if (Ar<0) {
+
+alert("tul kicsi ertek");
+return Ar=0;
+}
+let allando= 120;
+let amount=parseInt(ar.value)*allando;
+a.innerHTML=amount+"Ft";
+
+
+}
+</script>
+<style type="text/css">
+body {
+background:#009999;
+}
+h1 {
+background-color:#a00022;
+color:yellow;
+box-shadow:5px 3px black;
+border-radius:5px;
+text-align:center;
+}
+label {
+background-color:#a00022;
+box-shadow:5px 3px black;
+border-radius:5px;
+font-size:20px;
+color:gold;
+}
+input {
+background-color:#a00022;
+box-shadow:5px 3px black;
+border-radius:5px;
+font-size:20px;
+color:gold;
+}
+button {
+font-size: 20px;
+background-color:#a00022;
+box-shadow:5px 3px black;
+border-radius:5px;
+color:gold;
+}
+#a {
+text-align:center;
+border-radius:5px;
+box-shadow: 5px 5px #101010;
+background-color: white;
+font-size: 30px ;
+font-shadow:6px;
+color: #008899;
+}
+#b {
+background-color:#a00022;
+color:gold;
+}
+#d {
+ border-radius: 5px;
+ box-shadow: 5px 5px black;
+background-color:#a00022;
+color:gold;
+text-align:center;
+}
+</style>
+</body>
+</html>
