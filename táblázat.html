@@ -2,14 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  
 <title>táblázat</title>
 </head>
 <body>
 <h1>mi a cime</h1>
-<table>
+<table class="table table-dark table-striped">
 <tr>
 <th> sorszám</th>
-<th> név</th>
+<th> név cim</th>
 <th> életkor</th>
 </tr>
 <tr class="szam">
@@ -17,15 +18,15 @@
 <td>Kiss János</td>
 <td>45 év</td>
 </tr>
-<tr class="szam">
+<tr id="szam">
 <td > </td>
 <td>Kiss Jánosné</td>
 <td>41 év</td>
 </tr>
 <tr class="szam">
 <td ></td>
-<td>Kiss Jánosné</td>
-<td>41 év</td>
+<td id="name">Kiss Jánosné</td>
+<td id="age">41 év</td>
 </tr>
 <tr class="szam">
 <td ></td>
@@ -35,13 +36,17 @@
 </table>
 <script type="text/javascript">
 let i;
-for (let i = 0; i <10; i++) 
-{
+for (let i = 0; i <10; i++) {
 document.querySelector("tr.szam").innerHTML=i;
+
+const number = '{"number":"i"}';
+const object = JSON.parse(number);
+const name='{"firstname":"Toth Tamas",  "age": "46", "adresse":"Vasarosnameny szechenyi 1"}';
+const obj = JSON.parse(name);
+document.getElementById("name").innerHTML=obj.firstname+" "+obj.adresse;
+document.getElementById("age").innerHTML=obj.age+" "+"év"
+document.getElementById("szam").innerHTML=object.number;
 }
-
-
-
 </script>
 
 <button > gomb</button>
