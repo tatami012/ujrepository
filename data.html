@@ -1,69 +1,34 @@
 <!DOCTYPE html>
 <html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <head>
-<title>Data sheet</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<title></title>
 </head>
-<body> 
-<h1>Data sheet</h1>
-<div class="row">
-<div clas="container">
-<div class="col-4"></div>
-<div class="col-6">
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+</svg>
+<table class="table table-striped table-hover">
 
-<label >Your Name</label>
-<input type="text" placeholder="Lastname Firstname" name="name" autofocus><br>
-<label >Your date of birth</label>
-<input type="number" placeholder="birthsday" name="birth"><br>
-<label > Your Address</label>
-<input type="text" name="cim">
-<button onclick="Myfunction()" class="btn btn-primary">gomb</button>
-<div class="col-2"></div>
-</div>
-</div>
-</div>
-
-<table class="table table-striped table-dark">
+<thead>
 <tr>
-<th>Name</th>
-<th>Age</th>
-<th>Address</th>
+<th>id</th>
+<th>text</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td id="adatok"></td>
-<td id="age"></td>
-<td id="address"></td>
-</tr>
-</table>
-
+<td>1</td>
+<td id="first">hdhdj</td>
+<tr>
+<td>2</td>
+<td id="second">Second</td>
 <script type="text/javascript">
-function Myfunction() {
-let x= document.querySelector( "input[name='name']");
-let y= document.querySelector( "input[name='birth']");
-let z= document.querySelector( "input[name='cim']");
-let yNumber= parseInt(y.value);
-let xText = String(x.value);
-let zSting = String(z.value);
-let tomb={name:xText,age:yNumber,address:zSting};
-let Data = document.getElementById("adatok");
-let Age = document.getElementById("age");
-let Address = document.getElementById("address")
-Data.innerHTML = tomb.name;
-Age.innerHTML = tomb.age;
-Address.innerHTML= tomb.address;
-Myfunction()
-}
-alert("take care of your data");
-</script>
-<style type="text/css">
-body {
-background-color: 	 	#c3ceee;
-}
-h1 {
-background-color: #ffbb00;
-text-align: center;
-}
 
-</style>
+const user='{"name":"Csaba","age":25}';
+const obj=JSON.parse(user);
+document.getElementById("first").innerHTML = obj.name;
+document.getElementById("second").innerHTML = obj.age;
+</script>
 </body>
 </html>

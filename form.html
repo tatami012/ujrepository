@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+               
+                </div>
+                <div class="col-8">
+                    
+<form>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+</svg>
+<label for="name"><b>Username</b></label><br>
+<input id="name" type="text"name="name" autofocus><br>
+<label for="password"><b>Password</b></label><br>
+<input id="password" type="password"name="password"><br><br>
+<p id="alert" style="color: red;"></p>
+<button type="button" class="btn btn-primary"onclick="login( )">Login
+<a href="data.html">tabel</a></button>
+</form>
+
+<div class="col-2">
+    
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript"> 
+ function login( ) {
+const loginName = '{"username":"Admin","password":"admin123"}';
+const obj = JSON.parse(loginName);
+let password = obj.password;
+ if (document.querySelector("input [name='password']")!=obj.password){
+ document.getElementById("alert").innerHTML="Hibás Bejelentkezési adatok"}
+ if (document.querySelector("input [name='password']")==obj.password){
+document.getElementById("alert").innerHTML="jo jelszo felhname paros"
+ };
+alert(obj.pasword); 
+ }
+ 
+ </script>
+</body>
+
+
+
+
+
+
+</html>
